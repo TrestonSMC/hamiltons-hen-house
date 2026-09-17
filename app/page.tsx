@@ -3,19 +3,9 @@ import Link from "next/link";
 
 const products = [
   {
-    title: "Chicken Eggs",
-    image: "/chicken-eggs.png",
-    text: "Farm fresh chicken eggs from happy hens raised locally.",
-  },
-  {
-    title: "Quail Eggs",
+    title: "Hatching Quail Eggs",
     image: "/quail-eggs.png",
-    text: "Small batch speckled quail eggs, perfect for cooking and snacks.",
-  },
-  {
-    title: "Pickled Quail Eggs",
-    image: "/pickled-quail-eggs.png",
-    text: "Hand-packed pickled quail eggs made in small batches with bold farm flavor.",
+    text: "Fresh, fertile quail eggs carefully collected from our breeding flock and ready for incubation.",
   },
 ];
 
@@ -133,29 +123,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PRODUCTS */}
+      {/* AVAILABLE NOW */}
       <section className="border-y border-[#D8CBB6] bg-[#EFE7DA] py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <div>
               <p className="font-semibold uppercase tracking-[0.25em] text-[#B89A67]">
-                Featured Farm Goods
+                Available Now
               </p>
 
               <h3 className="mt-3 text-4xl font-black md:text-5xl">
-                Fresh From The Farm
+                Hatching Quail Eggs
               </h3>
             </div>
 
             <Link
-              href="/products"
+              href="/order"
               className="rounded-full border border-[#171717] px-6 py-3 font-semibold transition hover:bg-[#171717] hover:text-white"
             >
-              View All Products
+              Order Now
             </Link>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="mx-auto max-w-xl">
             {products.map((item) => (
               <div
                 key={item.title}
@@ -236,19 +226,19 @@ export default function HomePage() {
           </p>
 
           <h3 className="mt-6 text-5xl font-black leading-tight md:text-6xl">
-            Fresh Eggs. Local Farm. Real Quality.
+            Start Your Own Quail Flock
           </h3>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
-            Order directly from our farm and enjoy locally raised eggs from
-            happy hens and quail.
+            Order fertile hatching eggs directly from our local breeding flock
+            and begin your next hatch.
           </p>
 
           <Link
             href="/order"
             className="mt-10 inline-block rounded-full bg-[#B89A67] px-10 py-5 font-semibold text-[#171717] transition hover:scale-105"
           >
-            Order Fresh Eggs
+            Order Hatching Eggs
           </Link>
         </div>
       </section>
